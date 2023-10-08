@@ -84,3 +84,50 @@ button:focus {
   border: 1px solid var(--color-accent);
   border-radius: 4px;
 }
+
+/* home */
+#home {
+  background-color: var(--color-primary);
+  color: var(--color-text);
+  padding: 5rem 1rem;
+  padding-top: 7rem;
+  text-align: center;
+}
+.home__avatar {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  /* object-fit은 <img>,<vide> 요소와 같이 컨텐츠 크기를 어떤 방식으로 조절해 요소에 맞출건인지 지정
+    cover는 가로 세로 비를 유지하면서 요소 콘텐츠 박스를 가득 채움 서로 가로 세로 비율이 일치하지 않으면 일부 잘려나감
+  */
+  border-radius: 100%;
+  border: 3px solid var(--color-accent);
+}
+.home__title {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+.home__title--strong {
+  color: var(--color-accent);
+}
+.home__description {
+  font-size: 20.8px;
+}
+.home__contact {
+  display: inline-block;
+  background-color: var(--color-accent);
+  padding: 0.5rem 1rem;
+  margin: 32px;
+  font-weight: bold;
+  color: var(--color-black);
+  border-radius: 4px;
+}
+
+.home__contact:hover {
+  background-color: transparent;
+  color: var(--color-text);
+  outline: 2px solid var(--color-accent);
+  /* border를 썼을땐 height 크기를 지정안해서 호버 이벤트가 작동하는 순간 보더가 생기면서 home의 height가 늘어나는것처럼 보임
+   그래서 컨텐츠에 영향을 주지않고 외곽의 효과를 주면서 크기변화는 안 주는 outline 사용 
+  */
+}
