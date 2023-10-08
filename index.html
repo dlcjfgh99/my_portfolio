@@ -128,64 +128,71 @@
       </section>
       <!-- skils -->
 
-      <section id="skils" class="section">
-        <h2 class="title">My Skills</h2>
-        <p class="description">
-          Experience with all phase of the software life-cycle. passion for
-          learning new technologies. Capable of working within a team
-          environment and independenctly. Ability to plan and time schedule,
-          work under strict time pressure and dapt quickly when needed.
-        </p>
-        <div>
-          <section>
-            <h3>Coding Skills</h3>
-            <ul>
-              <li>
-                <div><span>HTML</span><span>98%</span></div>
-                <div><div style="width: 98%"></div></div>
-              </li>
-              <li>
-                <div><span>CSS</span><span>90%</span></div>
-                <div><div style="width: 90%"></div></div>
-              </li>
-              <li>
-                <div><span>JavaScript</span><span>90%</span></div>
-                <div><div style="width: 90%"></div></div>
-              </li>
-              <li>
-                <div><span>TypeScript</span><span>80%</span></div>
-                <div><div style="width: 80%"></div></div>
-              </li>
-              <li>
-                <div><span>React</span><span>88%</span></div>
-                <div><div style="width: 88%"></div></div>
-              </li>
-              <li>
-                <div><span>NodeJs</span><span>77%</span></div>
-                <div><div style="width: 77%"></div></div>
-              </li>
-            </ul>
-          </section>
+      <section id="skills" class="section">
+        <!-- class="section max-container" 였는데 max-container 지움 
+          그 이유는 이걸 설정해서 배경색까지 같이 제한되어버림 
+          그래서 그 하위요소 아이템에게 제한하는것이 좋음
+        그래서 div로 박스를 하나 더 설정해줌
+        -->
+        <div class="max-container">
+          <h2 class="title">My Skills</h2>
+          <p class="description">
+            Experience with all phase of the software life-cycle. passion for
+            learning new technologies. Capable of working within a team
+            environment and independenctly. Ability to plan and time schedule,
+            work under strict time pressure and dapt quickly when needed.
+          </p>
+          <div class="skills">
+            <section class="skill__coding">
+              <h3 class="skills_title">Coding Skills</h3>
+              <ul>
+                <li>
+                  <div><span>HTML</span><span>98%</span></div>
+                  <div><div style="width: 98%"></div></div>
+                </li>
+                <li>
+                  <div><span>CSS</span><span>90%</span></div>
+                  <div><div style="width: 90%"></div></div>
+                </li>
+                <li>
+                  <div><span>JavaScript</span><span>90%</span></div>
+                  <div><div style="width: 90%"></div></div>
+                </li>
+                <li>
+                  <div><span>TypeScript</span><span>80%</span></div>
+                  <div><div style="width: 80%"></div></div>
+                </li>
+                <li>
+                  <div><span>React</span><span>88%</span></div>
+                  <div><div style="width: 88%"></div></div>
+                </li>
+                <li>
+                  <div><span>NodeJs</span><span>77%</span></div>
+                  <div><div style="width: 77%"></div></div>
+                </li>
+              </ul>
+            </section>
 
-          <section>
-            <h3>Tools</h3>
-            <ul>
-              <li>Visual Studio Code</li>
-              <li>Intellij</li>
-              <li>Android Studio Code</li>
-              <li>iOS development tools</li>
-              <li>Sketch app</li>
-            </ul>
-          </section>
+            <section class="skill__tools">
+              <h3 class="skills_title">Tools</h3>
+              <ul>
+                <li>Visual Studio Code</li>
+                <li>Intellij</li>
+                <li>Android Studio Code</li>
+                <li>iOS development tools</li>
+                <li>Sketch app</li>
+              </ul>
+            </section>
 
-          <section>
-            <h3>Etc</h3>
-            <ul>
-              <li>Git</li>
-              <li>Scrum master</li>
-              <li>Math</li>
-            </ul>
-          </section>
+            <section class="skill__etc">
+              <h3 class="skills_title">Etc</h3>
+              <ul>
+                <li>Git</li>
+                <li>Scrum master</li>
+                <li>Math</li>
+              </ul>
+            </section>
+          </div>
         </div>
       </section>
       <!-- work -->

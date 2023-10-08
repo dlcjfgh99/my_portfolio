@@ -211,3 +211,43 @@ https://manuarora.in/boxshadows */
   color: var(--color-primary);
   font-size: 0.8rem;
 }
+/* Skills */
+#skills {
+  background-color: var(--color-primary-variant);
+  color: var(--color-text);
+}
+.skills {
+  display: grid;
+  grid-template-columns: 6fr 4fr;
+  margin: 32px 3rem;
+  border-radius: 8px;
+  /* overflow:hidden를 안해주면 border-radius가 안된걸로 나오는데 
+  그게 아니라 적용은됐으나 그리드를 사용했어서 그리드 배경색이 삐져나와서 보이는거임 그래서 안된걸로 보이는거 */
+  overflow: hidden;
+  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12);
+}
+.skills_title {
+  color: var(--color-accent);
+  margin: 1rem 0;
+  font-size: 1.2rem;
+}
+.skill__coding {
+  grid-row: span 2;
+  /* grid-row:span 2 세로로 두 그리드 차지
+    grid-column:span 2 가로로 두 그리드 차지
+  */
+  padding: 1rem;
+  background-color: var(--color-primary);
+}
+.skill__tools {
+  padding: 1rem;
+}
+.skill__etc {
+  padding: 1rem;
+  background-color: var(--color-primary);
+  filter: brightness(150%);
+  /* 색깔을 살짝 변형시킬때 */
+}
