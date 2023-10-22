@@ -252,38 +252,37 @@ https://manuarora.in/boxshadows */
   filter: brightness(150%);
   /* 색깔을 살짝 변형시킬때 */
 }
-.bar{
+.bar {
   display: flex;
   flex-direction: column;
   padding: 1rem;
   gap: 0.5rem;
 }
-.bar__metadata{
-display: flex;
-justify-content: space-between;
+.bar__metadata {
+  display: flex;
+  justify-content: space-between;
 }
-.bar__bg{
+.bar__bg {
   width: 100%;
   height: 3px;
   background-color: var(--color-primary-variant);
-
 }
-.bar__value{
+.bar__value {
   height: 3px;
   background-color: var(--color-accent);
 }
 /* work */
-#work{
+#work {
   background-color: var(--color-primary);
   color: var(--color-text);
 }
-.categories{
-display: flex;
-justify-content: center;
-margin: 2.5rem;
-gap: 1rem;
+.categories {
+  display: flex;
+  justify-content: center;
+  margin: 2.5rem;
+  gap: 1rem;
 }
-.category{
+.category {
   position: relative;
   color: var(--color-text);
   font-size: 1.1rem;
@@ -291,13 +290,13 @@ gap: 1rem;
   border-radius: 4px;
   border: 1px solid var(--color-accent);
   cursor: pointer;
-white-space: nowrap;
+  white-space: nowrap;
 }
-.category__selected{
+.category__selected {
   background-color: var(--color-accent);
   color: var(--color-primary);
 }
-.category__count{
+.category__count {
   opacity: 0;
   position: absolute;
   top: -20px;
@@ -309,11 +308,54 @@ white-space: nowrap;
   background-color: var(--color-accent-variant);
   color: var(--color-text);
   transition: all 250ms ease-in;
-
 }
-.category__selected .category__count,.category:hover .category__count{
+.category__selected .category__count,
+.category:hover .category__count {
   opacity: 1;
   top: 0;
 }
-
-  
+.projects {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 16px;
+}
+.project {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.project__img {
+  width: 100%;
+}
+.project__metadata {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 250ms ease-in;
+  transform: translateY(-10px);
+  justify-content: center;
+}
+.project__metadata:hover {
+  opacity: 0.8;
+  transform: translateY(0px);
+}
+.project__title::after {
+  content: "";
+  display: block;
+  position: relative;
+  transform: translateX(-50%);
+  margin: 0.5rem 0;
+  left: 50%;
+  width: 50px;
+  height: 2px;
+  background-color: var(--color-accent);
+  /* 꾸미기용 가상요소 프로젝트 이미지 누르면 파란색 바 만들떄 쓰임 */
+}
