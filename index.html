@@ -69,6 +69,7 @@
     <main>
       <!-- home -->
       <section id="home">
+        <div class="home__container">
         <img
           class="home__avatar"
           src="images/icon/removeBackground.jpg"
@@ -80,8 +81,9 @@
           <strong class="home__title--strong"> Gym rat coder</strong> Cheolho
         </h2>
         <p class="home__description">운동하는 개발자</p>
-        <a href="#contact" class="home__contact">contact</a>
-      </section>
+        <a href="#contact" class="home__contact">contact</a> 
+      </div>
+      </section>   
       <!-- about -->
       <section id="about" class="section max-container">
         <h2 class="title">About me</h2>
@@ -127,7 +129,6 @@
         <div></div>
       </section>
       <!-- skils -->
-
       <section id="skills" class="section">
         <!-- class="section max-container" 였는데 max-container 지움 
           그 이유는 이걸 설정해서 배경색까지 같이 제한되어버림 
@@ -428,9 +429,11 @@
       </section>
       <!-- Arrow up -->
       <aside>
-        <a href="#home" title="back to top" class="arrow-up">
+        <div class="arrow__container">
+            <a href="#home" title="back to top" class="arrow-up">
           <i class="fa-solid fa-arrow-up"></i>
         </a>
+        </div>
       </aside>
     </main>
     <!-- Footer -->

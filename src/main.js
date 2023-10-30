@@ -9,3 +9,20 @@ document.addEventListener("scroll", () => {
     header.classList.remove("header--dark");
   }
 });
+
+// 내리면 내릴 수록 home의 opacity가 증가
+const home= document.querySelector('.home__container')
+const homeHeight= home.offsetHeight;
+document.addEventListener("scroll",()=>{
+  home.style.opacity= 1- (window.scrollY / homeHeight);
+})
+
+// home 절반정도 내려가면 arrow 버튼 생기게 
+document.addEventListener('scroll',()=>{
+if(window.scrollY>homeHeight/2){
+    document.querySelector('.arrow__container').style.display="block";
+  }else if(window.scrollY=0 || window.scrollY<homeHeight/2){
+    document.querySelector('.arrow__container').style.display="none"
+  }
+
+})
