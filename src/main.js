@@ -17,7 +17,7 @@ const home = document.querySelector(".home__container");
 const homeHeight = home.offsetHeight;
 // offsetHeight ==getboundingClientRect
 document.addEventListener("scroll", () => {
-  homeSection.style.opacity = 1 - window.scrollY / homeHeight;
+  home.style.opacity = 1 - window.scrollY / homeHeight;
 });
 
 // 홈이 절반정도 내려가면 화살표 아이콘 나오게 하고 그 위로 올라가면 안 보이게 하기
@@ -28,3 +28,14 @@ document.addEventListener("scroll", () => {
     document.querySelector(".arrow-up").style.display = "none";
   }
 });
+
+// 모바일화면일때 Header의 부분을 navbar로 바꾸고 누르면 펴지고 다시 누르면 없어지는
+// let navBar = `(<i class="fa-solid fa-bars"></i>)`;
+const headerNav = document.querySelector(".header__nav");
+let headerMenu = document.querySelector(".header__menu");
+if (window.innerWidth <= 576) {
+  document
+    .querySelector(".header__nav__button")
+    .addEventListener("click", function () {});
+  // navBar.classList.add("fa-solid", "fa-bars");
+}

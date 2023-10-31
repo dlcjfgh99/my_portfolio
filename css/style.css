@@ -487,6 +487,10 @@ https://manuarora.in/boxshadows */
   .testimonial:nth-child(even) .testimonial__img {
     order: 0;
   }
+  /* @media screen and (min-width: 576px) {
+    .header__menu {
+      opacity: 0;
+    } */
 
   .arrow-up {
     font-size: 2rem;
@@ -494,5 +498,26 @@ https://manuarora.in/boxshadows */
     height: 3rem;
     bottom: 1.5rem;
     right: 1.5rem;
+  }
+}
+@media screen and (max-width: 576px) {
+  .header__nav {
+    position: relative;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+  }
+  .header__menu {
+    display: none;
+  }
+  .header__nav__button {
+    position: absolute;
+    opacity: 1;
+    color: var(--color-accent);
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+  .header__nav__button > i {
+    font-size: 32px;
   }
 }
