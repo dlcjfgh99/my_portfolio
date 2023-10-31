@@ -9,3 +9,19 @@ document.addEventListener("scroll", () => {
     header.classList.remove("header--dark");
   }
 });
+// 내릴 수록 home섹션의 컨텐츠 투명도를 점진적으로 불투명하게
+const homeSection = document.querySelector(".home__container");
+const homeHeight = home.offsetHeight;
+// offsetHeight ==getboundingClientRect
+document.addEventListener("scroll", () => {
+  homeSection.style.opacity = 1 - window.scrollY / homeHeight;
+});
+
+// 홈이 절반정도 내려가면 화살표 아이콘 나오게 하고 그 위로 올라가면 안 보이게 하기
+document.addEventListener("scroll", () => {
+  if (window.scrollY > homeHeight / 2) {
+    document.querySelector(".arrow-up").style.display = "block";
+  } else {
+    document.querySelector(".arrow-up").style.display = "none";
+  }
+});
