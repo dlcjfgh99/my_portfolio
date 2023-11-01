@@ -31,13 +31,10 @@ document.addEventListener("scroll", () => {
 
 // 모바일화면일때 Header의 부분을 navbar로 바꾸고 누르면 펴지고 다시 누르면 없어지는
 // let navBar = `(<i class="fa-solid fa-bars"></i>)`;
-const headerNav = document.querySelector(".header__nav");
-let headerMenu = document.querySelector(".header__menu");
-if (window.innerWidth <= 576) {
-  document
-    .querySelector(".header__nav__button")
-    .addEventListener("click", function () {
-    document.querySelector(".header__menu").style
-    });
-  // navBar.classList.add("fa-solid", "fa-bars");
-}
+const headerMenu = document.querySelector(".header__menu");
+const navBar = document.querySelector(".header__toggle")
+   navBar.addEventListener("click", function () {
+      headerMenu.classList.toggle('open');
+    })
+    
+
