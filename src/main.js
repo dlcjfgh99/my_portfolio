@@ -36,6 +36,8 @@ let headerMenu = document.querySelector(".header__menu");
 if (window.innerWidth <= 576) {
   document
     .querySelector(".header__nav__button")
-    .addEventListener("click", function () {});
+    .addEventListener("click", function () {
+    document.querySelector(".header__menu").style
+    });
   // navBar.classList.add("fa-solid", "fa-bars");
 }
