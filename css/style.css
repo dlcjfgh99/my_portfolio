@@ -119,6 +119,11 @@ button:focus {
   gap: 4px;
 }
 .header__menu__item {
+  display: block;
+  border-bottom: 1px solid transparent;
+  /* 이게 추가된 이유는 border든 outline이든 추가되는 px 크기만 큼
+  컨텐츠 크기가 변하는데(내려감) 그걸 밀려나지 않게 하려면 1.높이고정(하지만 반응이 유동적이지않음 )
+  2. 미리  보더를 주되 색깔을 투명으로 해서 하면 밀리지않음 */
   padding: 8px 16px;
 }
 .header__menu__item:hover {
@@ -446,11 +451,17 @@ https://manuarora.in/boxshadows */
     display: none;
     flex-direction: column;
     text-align: center;
-    padding: 1rem 4rem;
+ margin: 1rem 4rem;
+ /* padding이었는데 마진으로 바꿈 그 이유는 버튼 박스 바깥을 눌러도 클릭이벤트가 작용되기떄문에 
+ 안쪽영역인 padding이 아니라 바깥쪽 영역인 margin을 주는거 */
     gap: 1rem;
   }
-  .header__menu .open{
+  .header__menu.open{
     display: flex;
+  }
+  .header__menu__item{
+    display: block;
+
   }
   .header__toggle{
     display: block;
@@ -459,7 +470,7 @@ https://manuarora.in/boxshadows */
     width: 100%;
   }
   .section {
-    padding: 3rem 2rem;
+    padding: 4rem 2rem;
   }
   .title {
     font-size: 2rem;
@@ -512,19 +523,3 @@ https://manuarora.in/boxshadows */
     right: 1.5rem;
   }
 }
-/* @media screen and (max-width: 576px) {
-.header__nav__button {
-  color: var(--color-accent);
-  position: absolute;
-  right: 0;
-  font-size: 2rem;
-}
-.header__menu {
-  visibility: hidden;
-  position: absolute;
- left: 50%;
- padding: 0;
-
-}
-
-}  */

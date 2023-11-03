@@ -36,5 +36,8 @@ const navBar = document.querySelector(".header__toggle")
    navBar.addEventListener("click", function () {
       headerMenu.classList.toggle('open');
     })
-    
 
+// navbar 메뉴 클릭시 자동으로 닫아줌
+headerMenu.addEventListener("click", function () {
+  headerMenu.classList.remove('open');
+})
