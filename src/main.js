@@ -1,3 +1,5 @@
+'use strict';
+// strict모드로 해놓기
 // 스크롤된 높이가 헤더부분의 Y보다 커지면 다크모드로 변경 처음엔 다른색으로 구글 검사에서 #home 배경색을 보라색으로 바꿔놓ㅇ므
 const header = document.querySelector(".header");
 const headerHeight = header.offsetHeight;
