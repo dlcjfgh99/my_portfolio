@@ -43,3 +43,21 @@ const navBar = document.querySelector(".header__toggle")
 headerMenu.addEventListener("click", function () {
   headerMenu.classList.remove('open');
 })
+
+// 프로젝트를 누를때마다 프로젝트 속성에 따른 사진들이 보이게끔
+// 힌트는 카테고리마다 타입을 줘서 선별
+// 클릭한 카테고리와 그의 속하는 밑에 항목들이 같아야함
+
+const categories=document.querySelector(".categories");
+const projects=document.querySelector(".projects")
+// document.querySelectorAll.addEventListner는 불가 왜냐면 쿼리셀렉터올이 nodeList를 반환하기 때문에 for문으로 우회
+
+// 카테고리의 데이터 값과 거기에 속하는 데이터값이 일치한것만 남기는거고 아닌건 숨겨
+
+categories.addEventListener("click",function(e){
+ const filter = e.target.dataset.id;
+ const filterproject=projects.dataset.id
+if(filter == filterproject){
+  console.log("gg")
+}
+})
