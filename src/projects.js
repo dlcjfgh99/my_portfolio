@@ -34,15 +34,14 @@ function handleActiveSelection(target) {
 }
 
 function filterProjects(filter) {
-  projectsContainer.classList.add("anim-out");
   projects.forEach((project) => {
     if (filter === "All" || filter === project.dataset.id) {
       project.style.display = "block";
     } else {
       project.style.display = "none";
     }
-    handleActiveSelection(event.target);
   });
+  projectsContainer.classList.add("anim-out");
   setTimeout(() => {
     projectsContainer.classList.remove("anim-out");
   }, 250);
