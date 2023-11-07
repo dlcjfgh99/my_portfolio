@@ -42,7 +42,39 @@ function filterProjects(filter) {
     }
   });
   projectsContainer.classList.add("anim-out");
-  setTimeout(() => {
+  setTimeout(() => {s
     projectsContainer.classList.remove("anim-out");
   }, 250);
+}  
+
+
+
+// const io = new IntersectionObserver((e)=>{
+//   e.forEach((박스)=>{
+    // console.log(박스.target['id'])   
+    // if 박스.targer['id']와 header__menu__item안의 텍스트 내용이 같다면 우선 먼저 home의 active없애고 그다음 그에 맞는곳에 add하기
+//        if(박스.isIntersecting ===true &&박스.target['id']){
+//         document.querySelector('.header__menu__item').classList.remove('active')
+      
+        
+//  }
+
+
+
+//   })
+// })
+
+const Observer=new IntersectionObserver(callback);
+let sectionClss=document.querySelectorAll(".section");
+sectionClss.forEach((i)=>{
+  Observer.observe(i)
+})
+function callback(entries){
+entries.forEach((entry)=>{
+if(entry.isIntersectiong===true){
+  entry.target.classList.add('active')
+}else{
+  entry.target.classList.remove('active')
+}
+})
 }
