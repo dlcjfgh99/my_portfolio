@@ -46,3 +46,19 @@ function filterProjects(filter) {
     projectsContainer.classList.remove("anim-out");
   }, 250);
 }
+
+// 스크롤 내릴때 about 섹션에 들어오면 header의about쪽이 셀렉트 되게
+function updateHeader(entries) {
+  const headerUpdate = document.querySelector(".header__menu");
+  entries.forEach((entry) => {
+    const headerActives = headerUpdate.querySelectorAll(".header__menu__item");
+    headerActives.forEach((i) => {
+      i.classList.toggle("active", entry.isIntersecting);
+    });
+  });
+}
+const io = new IntersectionObserver(updateHeader);
+const section = document.querySelectorAll(".section");
+section.forEach((i) => {
+  io.observe(i);
+});
