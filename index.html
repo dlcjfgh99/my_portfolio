@@ -40,6 +40,7 @@
     <!-- js -->
     <script type="module" src="./src/main.js?ver=123" defer></script>
     <script type="module" src="./src/projects.js" defer></script>
+    <script type="module" src="./src/active_menu.js" defer></script>
     <!-- type="module" 은 모듈화 해놓은것으로 이렇게 script를 해놓으면 서로 코드가 겹치고 특히 전역변수같은것들 또는 버그가 어디서 발생했는지 등등 알아채리기 힘들어서 
   모듈화한것 main에서 선언한 변수는 projects에선 선언하지않는 한 안됨-->
     <!-- defer는 문서가 다 분석된 다음 실행해라 이거 안하면 자바스크립트 다운로드받을때까지 html 표기가 안되기때문에 ui가 느리게 뜸 -->
@@ -65,12 +66,13 @@
           <li>
             <a class="header__menu__item" href="#testimonial">Testimonial</a>
           </li>
-          <li class="contact"><a class="header__menu__item" href="#contact">Contact</a></li>
+          <li class="contact">
+            <a class="header__menu__item" href="#contact">Contact</a>
+          </li>
         </ul>
       </nav>
       <button class="header__toggle" aria-label="navigation menu toggle">
         <i class="fa-solid fa-bars"></i>
-        
       </button>
     </header>
     <!-- Main -->
