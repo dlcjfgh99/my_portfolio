@@ -8,7 +8,7 @@ const categories = document.querySelector(".categories");
 // 카테고리의 데이터 값과 거기에 속하는 데이터값이 일치한것만 남기는거고 아닌건 숨겨
 const projects = document.querySelectorAll(".project");
 const projectsContainer = document.querySelector(".projects");
-categories.addEventListener("click", function (event) {
+categories.addEventListener("click", (event) => {
   const filter = event.target.dataset.category;
   if (filter == null) {
     return;
@@ -35,7 +35,7 @@ function handleActiveSelection(target) {
 
 function filterProjects(filter) {
   projects.forEach((project) => {
-    if (filter === "All" || filter === project.dataset.id) {
+    if (filter === "All" || filter === project.dataset.type) {
       project.style.display = "block";
     } else {
       project.style.display = "none";
@@ -43,7 +43,6 @@ function filterProjects(filter) {
   });
   projectsContainer.classList.add("anim-out");
   setTimeout(() => {
-    s;
     projectsContainer.classList.remove("anim-out");
   }, 250);
 }

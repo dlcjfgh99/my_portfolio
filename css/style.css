@@ -25,6 +25,10 @@
 * {
   box-sizing: border-box;
 }
+html {
+  scroll-behavior: smooth;
+  /* 링크눌러서 스크롤 될때 스무스하게 올라가는걸 하기 위해서 문서 전체가 스크롤될때 스무스하게 움직이게끔 css로 설정 */
+}
 body {
   font-family: "Open Sans", sans-serif;
   margin: 0;
