@@ -115,6 +115,8 @@
           <p class="home__description">운동하는 개발자</p>
           <a href="#contact" class="home__contact">contact</a>
         </div>
+        <!-- svg divider의 문제점은 디자인을 위한 svg태그가 넘 많고 재사용이 불가 -->
+        <!-- 수정함 css에 이 코드를 넣음 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none" > <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" ></path> </svg> -->
       </section>
       <!-- about -->
       <section id="about" class="section max-container">
@@ -500,3 +502,9 @@
     </footer>
   </body>
 </html>
+
+<!-- svg divider의 문제점은 디자인을 위한 svg태그가 넘 많고 재사용이 불가 -->
+<!-- svg 리팩토링 하는법
+1.가상요소 ::after사용
+2.svg를 변수로 사용해서 재사용가능하게
+-->
